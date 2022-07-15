@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 5vmin;
+  transform-style: preserve-3d;
+  transition: all 2s linear;
+  transform: perspective(calc(100vmax *1.5));
+}
+
+body, card {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+card {
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+  background: orange;
+}
+
+face {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    width: 50vw;
+    height: 50vh;
+}
+face:last-child {
+  transform: rotateY(180deg);
+}
+span {
+  line-height: 45vmin;
+  color: black;
+  font-weight: 900;
+  font-size: 250%;
+  transform: translateZ(12.5vmin);
+}
+
+card:hover {
+  transform: rotateY(180deg);
+}
