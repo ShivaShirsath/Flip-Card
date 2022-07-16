@@ -1,48 +1,41 @@
 * {
-  padding: 0;
-  margin: 0;
+  margin: 0 0;
+  padding: 0 0;
   box-sizing: border-box;
   border-radius: 5vmin;
   transform-style: preserve-3d;
-  transition: all 2s linear;
-  transform: perspective(calc(100vmax *1.5));
+  transform: perspective(calc(100vmax *7.5));
+  transition: transform 1s linear;
 }
-
-body, card {
-    width: 100vw;
-    height: 100vh;
+body, card, face{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100vw;
+    height: 100vh;
 }
-
-card {
+card, face {
   position: relative;
-  width: 50vw;
-  height: 50vh;
-  background: orange;
+  width: 75%;
+  height: 75%;
+  background: darkorange;
 }
-
 face {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-    width: 50vw;
-    height: 50vh;
+  background: transparent;
+  transform: translateZ(7.5vw);
 }
 face:last-child {
-  transform: rotateY(180deg);
+  transform: rotateY(.5turn);
 }
 span {
   line-height: 45vmin;
   color: black;
   font-weight: 900;
   font-size: 250%;
-  transform: translateZ(12.5vmin);
+  transform: translateZ(12.5vw);
 }
-
 card:hover {
-  transform: rotateY(180deg);
+  transform: rotateY(.5turn);
 }
